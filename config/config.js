@@ -6,7 +6,7 @@ const config = {
     password: process.env.DEV_PASSWORD,
     database: process.env.DEV_DATABASE,
     host: process.env.DEV_HOST,
-    dialect: process.env.DEV_DIALECT,
+    dialect: process.env.DEV_DIALECT || "postgres",
     logging: false
   },
   test: {
@@ -14,7 +14,7 @@ const config = {
     password: process.env.TEST_PASSWORD,
     database: process.env.TEST_DATABASE,
     host: process.env.TEST_HOST,
-    dialect: process.env.TEST_DIALECT,
+    dialect: process.env.TEST_DIALECT || "postgres",
     logging: false
   },
   production: {
@@ -22,7 +22,7 @@ const config = {
     password: process.env.PROD_PASSWORD,
     database: process.env.PROD_DATABASE,
     host: process.env.PROD_HOST,
-    dialect: process.env.PROD_DIALECT,
+    dialect: process.env.PROD_DIALECT || "postgres",
     logging: false
   },
 };

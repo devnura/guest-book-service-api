@@ -4,7 +4,21 @@ const path = require("path");
 const Sequelize = require("sequelize");
 const config = require("../config/config");
 const env = process.env.NODE_ENV || "development";
-const sequelize = new Sequelize(config[env]);
+
+const sequelize = new Sequelize(config[env].database, config[env].username ,  config[env].password.toString() , {
+  host: config[env].host,
+  dialect: config[env].dialect || "postgres",
+
+  pool: {
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000
+  },
+
+  operatorsAliases: false,
+  logging: false,
+});
 
 const db = {};
 

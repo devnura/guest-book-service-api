@@ -4,10 +4,10 @@ const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
-const winston = require("./app/helper/winston.logger");
+const winston = require("./helper/winston.logger");
 
 // models
-var models = require("./app/models");
+var models = require("./models");
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -23,8 +23,8 @@ models.sequelize.sync().then(function() {
 });
 
 // ============================== ROUTES API ==============================
-const authRoute = require("./app/routes/auth.routes");
-const guestbookRoute = require("./app/routes/guestbook.routes");
+const authRoute = require("./routes/auth.routes");
+const guestbookRoute = require("./routes/guestbook.routes");
 
 //route v1
 app.use('/api/v1/', router);
