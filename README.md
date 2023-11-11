@@ -35,3 +35,14 @@ Before you begin, ensure you have the following installed:
    ```bash
    git clone https://github.com/your-username/guest-book-app.git
    cd guest-book-app
+
+2. Instal depedency:
+
+   ```bash
+   npm i
+
+2. Run migration and seeder:
+
+   ```bash
+   npx sequelize db:migrate
+   npx sequelize-cli db:seed:all
