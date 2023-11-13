@@ -33,16 +33,21 @@ Before you begin, ensure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/guest-book-app.git
-   cd guest-book-app
+   git clone https://github.com/devnura/mit-test-backend-dev.git
+   cd mit-test-backend-dev
 
 2. Instal depedency:
 
    ```bash
    npm i
 
-2. Run migration and seeder:
+3. Run migration and seeder:
 
    ```bash
    npx sequelize db:migrate
    npx sequelize-cli db:seed:all
+   
+4. For the default admin email and password
+     username : admin@admin.com
+     password : admin
+   
