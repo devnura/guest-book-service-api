@@ -49,5 +49,6 @@ Before you begin, ensure you have the following installed:
    
 4. For the default admin email and password
      username : admin@admin.com
+   
      password : admin
    
