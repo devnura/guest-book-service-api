@@ -127,10 +127,10 @@ const list = async (req, res) => {
     const totalCount = await PersonalInfo.count(); // Get the total count of items
 
     // Check if the requested page is out of bounds
-    if (offset >= totalCount) {
-      result = helper.createResponse(400, "Bad Request", "Invalid page number", []);
-      return res.status(400).json(result);
-    }
+    // if (offset >= totalCount) {
+    //   result = helper.createResponse(400, "Bad Request", "Invalid page number", []);
+    //   return res.status(400).json(result);
+    // }
 
     const totalPages = Math.ceil(totalCount / pageSize);
 
